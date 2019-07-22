@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rio.elecomptest.MainActivity"
+    >
+
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/header"
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:pageColor="#000000"
+            app:fillColor="#FFFFFF"
+            app:slideInterval="3000"
+            app:radius="6dp"
+            app:strokeColor="#FF7777"
+            app:strokeWidth="1dp"
+            />
+
+        <TextView
+            android:id="@+id/produknew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/carousel"
+            android:text="Produk Terbaru"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ff8f00"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/produknew"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+                <ImageView
+                    android:id="@+id/gambarproduk"
+                    android:layout_marginTop="-15dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/slider1"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/gambarproduk2"
+                    android:layout_marginTop="-15dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/slider1"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/judulproduk"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/produk"
+            android:layout_marginTop="-20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choco Shake Botol"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textColor="#212121"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choco Shake Cookies"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textColor="#212121"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fotoproduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/judulproduk"
+            android:text="Foto Terbaru"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ff8f00"
+            />
+
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/fotoproduk1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fotoproduk"
+            android:layout_marginTop="10dp"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/fotonew1"
+                android:layout_marginTop="-15dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/original"
+                android:layout_weight="1"
+                />
+
+
+            <ImageView
+                android:id="@+id/fotonew2"
+                android:layout_marginTop="-15dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/greentea"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:id="@+id/fotonew3"
+                android:layout_marginTop="-15dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hazelnut"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:id="@+id/fotonew4"
+                android:layout_marginTop="-15dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/redvelvet"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvslider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fotoproduk1"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="22dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

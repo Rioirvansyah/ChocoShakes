@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/db" android:title="Beranda" />
+    <item android:id="@+id/franchise" android:title="Franchise" />
+    <item android:id="@+id/galeri" android:title="Galeri" />
+    <item android:id="@+id/produk" android:title="Produk" />
+    <item android:id="@+id/hubungi" android:title="Hubungi" />
+</menu>
